@@ -1,0 +1,10 @@
+{
+  "name": "for-forin",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "David Borelli <david_borelli@live.com> (https://dborelli.com.br/)",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
+}
