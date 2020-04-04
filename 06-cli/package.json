@@ -5,7 +5,7 @@
   "author": "David Borelli <david_borelli@live.com> (https://dborelli.com.br/)",
   "license": "MIT",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha -w"
   },
   "devDependencies": {
     "mocha": "^7.1.1"

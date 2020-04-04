@@ -35,4 +35,10 @@ describe("Suite de manipulacao de Herois", function() {
 
     deepEqual(actual, expected);
   });
+
+  it("Deve remover um heroi, usando arquivo", async function() {
+    const expected = true;
+    const resultado = await database.remover(DEFAULT_ITEM_CADASTRAR.id);
+    deepEqual(resultado, expected);
+  });
 });
