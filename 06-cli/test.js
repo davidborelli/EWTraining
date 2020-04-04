@@ -8,6 +8,12 @@ const DEFAULT_ITEM_CADASTRAR = {
   poder: "Speed"
 };
 
+const DEFAULT_ITEM_ATUALIZAR = {
+  id: 2,
+  nome: "Lanterna Verde",
+  poder: "Energia do anel"
+};
+
 /*
   No JS ao inves de utilizar array[0], podemos utilizar da seguinte forma:
   [array] = ira pegar primeira posicao
@@ -17,6 +23,7 @@ const DEFAULT_ITEM_CADASTRAR = {
 describe("Suite de manipulacao de Herois", function() {
   before(async () => {
     await database.cadastrar(DEFAULT_ITEM_CADASTRAR);
+    await database.cadastrar(DEFAULT_ITEM_ATUALIZAR);
   });
 
   it("Deve pesquisar um heroi usando arquivos", async function() {
@@ -39,6 +46,24 @@ describe("Suite de manipulacao de Herois", function() {
   it("Deve remover um heroi, usando arquivo", async function() {
     const expected = true;
     const resultado = await database.remover(DEFAULT_ITEM_CADASTRAR.id);
+    deepEqual(resultado, expected);
+  });
+
+  it("Deve atualizar um heroi", async function() {
+    const expected = {
+      ...DEFAULT_ITEM_ATUALIZAR,
+      nome: "Batman",
+      poder: "Dinheiro"
+    };
+
+    const novoDado = {
+      nome: "Batman",
+      poder: "Dinheiro"
+    };
+
+    await database.atualizar(DEFAULT_ITEM_ATUALIZAR.id, novoDado);
+    const [resultado] = await database.listar(DEFAULT_ITEM_ATUALIZAR.id);
+
     deepEqual(resultado, expected);
   });
 });
