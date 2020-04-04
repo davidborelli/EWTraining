@@ -1,0 +1,16 @@
+{
+  "name": "06-cli",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "David Borelli <david_borelli@live.com> (https://dborelli.com.br/)",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "mocha": "^7.1.1"
+  },
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
+}
