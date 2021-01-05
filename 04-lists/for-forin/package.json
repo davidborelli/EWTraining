@@ -5,6 +5,6 @@
   "author": "David Borelli <david_borelli@live.com> (https://dborelli.com.br/)",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.19.2"
+    "axios": "^0.21.1"
   }
 }
